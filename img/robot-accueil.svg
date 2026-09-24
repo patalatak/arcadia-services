@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Arcadia — Robot d'accueil et d'orientation. Illustration vectorielle, sans dépendance externe. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 560" role="img" aria-label="Robot d'accueil et d'orientation">
+    <style>
+          /* Animations internes — désactivées si l'utilisateur limite les animations */
+          @keyframes regard { 0%,88%,100%{opacity:1} 92%,96%{opacity:.25} }
+          @keyframes pulseHalo { 0%,100%{opacity:.55} 50%{opacity:1} }
+          @keyframes ondeA { 0%{opacity:.25} 30%{opacity:1} 70%{opacity:.25} 100%{opacity:.25} }
+          circle[fill="#6ae4ff"]{ animation: regard 5.5s ease-in-out infinite; }
+          ellipse[fill="url(#halo)"]{ animation: pulseHalo 6s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(1){ animation: ondeA 2.8s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(2){ animation: ondeA 2.8s ease-in-out .35s infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(3){ animation: ondeA 2.8s ease-in-out .7s infinite; }
+          @media (prefers-reduced-motion: reduce){
+            circle[fill="#6ae4ff"], ellipse[fill="url(#halo)"], g[stroke="url(#onde)"] > path{ animation:none; }
+          }
+    </style>
+    <defs>
+          <linearGradient id="corps" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#26355a"/><stop offset="100%" stop-color="#18223a"/>
+          </linearGradient>
+          <linearGradient id="ecran" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2f66c4"/><stop offset="100%" stop-color="#1b3a70"/>
+          </linearGradient>
+          <linearGradient id="onde" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#1b46d8"/><stop offset="100%" stop-color="#6ae4ff"/>
+          </linearGradient>
+          <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#6ae4ff" stop-opacity=".20"/>
+                  <stop offset="100%" stop-color="#6ae4ff" stop-opacity="0"/>
+          </radialGradient>
+    </defs>
+    <ellipse cx="230" cy="250" rx="190" ry="230" fill="url(#halo)"/>
+    <ellipse cx="230" cy="520" rx="118" ry="14" fill="#6ae4ff" opacity=".14"/>
+    <!-- socle -->
+    <path d="M 178 430 H 282 l 26 58 a 16 16 0 0 1 -14 25 H 166 a 16 16 0 0 1 -14 -25 Z"
+              fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <rect x="186" y="456" width="88" height="9" rx="4.5" fill="#6ae4ff" opacity=".5"/>
+    <!-- colonne -->
+    <rect x="196" y="250" width="68" height="184" rx="16" fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <!-- grand écran d'orientation -->
+    <rect x="120" y="128" width="220" height="200" rx="22" fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <rect x="140" y="148" width="180" height="160" rx="14" fill="url(#ecran)"/>
+    <g fill="#bfe3ff" opacity=".92">
+          <rect x="160" y="172" width="96" height="9" rx="4.5"/>
+          <rect x="160" y="192" width="140" height="9" rx="4.5"/>
+          <rect x="160" y="212" width="72" height="9" rx="4.5"/>
+    </g>
+    <g fill="none" stroke="#6ae4ff" stroke-width="4" stroke-linecap="round" opacity=".9">
+          <path d="M 168 258 h 68"/><path d="M 236 258 l -16 -16"/><path d="M 236 258 l -16 16"/>
+    </g>
+    <circle cx="296" cy="272" r="12" fill="#6ae4ff"/>
+    <!-- tête / capteur -->
+    <rect x="176" y="56" width="108" height="60" rx="18" fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <circle cx="206" cy="86" r="10" fill="#6ae4ff"/>
+    <circle cx="254" cy="86" r="10" fill="#6ae4ff"/>
+    <!-- ondes -->
+    <g fill="none" stroke="url(#onde)" stroke-width="8" stroke-linecap="round" opacity=".9">
+          <path d="M 306 66 A 92 92 0 0 1 368 132"/>
+          <path d="M 322 34 A 136 136 0 0 1 410 132"/>
+    </g>
+</svg>
