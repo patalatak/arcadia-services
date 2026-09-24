@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Arcadia — scène d'accueil : flotte de robots de service en perspective.
+     Entièrement vectorielle, aucune dépendance externe. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 118 1440 602" role="img"
+       aria-label="Flotte de robots de service alignés dans un hall">
+    <style>
+          /* Animations internes — désactivées si l'utilisateur limite les animations */
+          @keyframes regard { 0%,88%,100%{opacity:1} 92%,96%{opacity:.25} }
+          @keyframes pulseHalo { 0%,100%{opacity:.55} 50%{opacity:1} }
+          @keyframes ondeA { 0%{opacity:.25} 30%{opacity:1} 70%{opacity:.25} 100%{opacity:.25} }
+          circle[fill="#6ae4ff"]{ animation: regard 5.5s ease-in-out infinite; }
+          ellipse[fill="url(#halo)"]{ animation: pulseHalo 6s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(1){ animation: ondeA 2.8s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(2){ animation: ondeA 2.8s ease-in-out .35s infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(3){ animation: ondeA 2.8s ease-in-out .7s infinite; }
+          @media (prefers-reduced-motion: reduce){
+            circle[fill="#6ae4ff"], ellipse[fill="url(#halo)"], g[stroke="url(#onde)"] > path{ animation:none; }
+          }
+    </style>
+    <defs>
+          <linearGradient id="corps" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#26355a"/><stop offset="100%" stop-color="#18223a"/>
+          </linearGradient>
+          <linearGradient id="ecran" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2f66c4"/><stop offset="100%" stop-color="#1b3a70"/>
+          </linearGradient>
+          <linearGradient id="onde" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#1b46d8"/><stop offset="100%" stop-color="#6ae4ff"/>
+          </linearGradient>
+          <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#6ae4ff" stop-opacity=".20"/>
+                  <stop offset="100%" stop-color="#6ae4ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="horizon" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#2a7fd4" stop-opacity=".55"/>
+                  <stop offset="45%" stop-color="#1b46d8" stop-opacity=".22"/>
+                  <stop offset="100%" stop-color="#17202e" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="fadeSol" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6ae4ff" stop-opacity=".30"/>
+                  <stop offset="100%" stop-color="#6ae4ff" stop-opacity="0"/>
+          </linearGradient>
+          <mask id="mSol">
+                  <rect x="0" y="392" width="1440" height="328" fill="url(#fadeSol)"/>
+          </mask>
+    </defs>
+
+    <!-- lueur d'horizon -->
+    <ellipse cx="720" cy="352" rx="760" ry="300" fill="url(#horizon)"/>
+
+    <!-- grille de sol -->
+    <g stroke="#6ae4ff" stroke-width="1.3" fill="none" mask="url(#mSol)">
+              <line x1="720" y1="392" x2="-1940" y2="780"/>
+          <line x1="720" y1="392" x2="-1750" y2="780"/>
+          <line x1="720" y1="392" x2="-1560" y2="780"/>
+          <line x1="720" y1="392" x2="-1370" y2="780"/>
+          <line x1="720" y1="392" x2="-1180" y2="780"/>
+          <line x1="720" y1="392" x2="-990" y2="780"/>
+          <line x1="720" y1="392" x2="-800" y2="780"/>
+          <line x1="720" y1="392" x2="-610" y2="780"/>
+          <line x1="720" y1="392" x2="-420" y2="780"/>
+          <line x1="720" y1="392" x2="-230" y2="780"/>
+          <line x1="720" y1="392" x2="-40" y2="780"/>
+          <line x1="720" y1="392" x2="150" y2="780"/>
+          <line x1="720" y1="392" x2="340" y2="780"/>
+          <line x1="720" y1="392" x2="530" y2="780"/>
+          <line x1="720" y1="392" x2="720" y2="780"/>
+          <line x1="720" y1="392" x2="910" y2="780"/>
+          <line x1="720" y1="392" x2="1100" y2="780"/>
+          <line x1="720" y1="392" x2="1290" y2="780"/>
+          <line x1="720" y1="392" x2="1480" y2="780"/>
+          <line x1="720" y1="392" x2="1670" y2="780"/>
+          <line x1="720" y1="392" x2="1860" y2="780"/>
+          <line x1="720" y1="392" x2="2050" y2="780"/>
+          <line x1="720" y1="392" x2="2240" y2="780"/>
+          <line x1="720" y1="392" x2="2430" y2="780"/>
+          <line x1="720" y1="392" x2="2620" y2="780"/>
+          <line x1="720" y1="392" x2="2810" y2="780"/>
+          <line x1="720" y1="392" x2="3000" y2="780"/>
+          <line x1="720" y1="392" x2="3190" y2="780"/>
+          <line x1="720" y1="392" x2="3380" y2="780"/>
+              <line x1="-60" y1="398.0" x2="1500" y2="398.0"/>
+          <line x1="-60" y1="416.8" x2="1500" y2="416.8"/>
+          <line x1="-60" y1="441.9" x2="1500" y2="441.9"/>
+          <line x1="-60" y1="475.6" x2="1500" y2="475.6"/>
+          <line x1="-60" y1="520.7" x2="1500" y2="520.7"/>
+          <line x1="-60" y1="581.2" x2="1500" y2="581.2"/>
+          <line x1="-60" y1="662.3" x2="1500" y2="662.3"/>
+    </g>
+
+    <!-- ligne d'horizon -->
+    <line x1="0" y1="392" x2="1440" y2="392" stroke="#6ae4ff" stroke-width="1.6" opacity=".38"/>
+
+    <!-- robots d'arrière-plan -->
+    <g>
+          <ellipse cx="300" cy="472.76" rx="44.160000000000004" ry="5.98" fill="#6ae4ff" opacity="0.08"/>
+          <path d="M 271.48 425.84 H 328.52 l 11.040000000000001 28.52 a 7.36 7.36 0 0 1 -6.44 11.96 H 266.88 a 7.36 7.36 0 0 1 -6.44 -11.96 Z" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.2" opacity="0.5"/>
+          <circle cx="280.68" cy="468.16" r="6.44" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="1.1" opacity="0.5"/>
+          <circle cx="319.32" cy="468.16" r="6.44" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="1.1" opacity="0.5"/>
+          <rect x="260.44" y="318.2" width="79.12" height="109.48" rx="10.120000000000001" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.2" opacity="0.5"/>
+          <rect x="256.76" y="355.0" width="86.48" height="5.5200000000000005" rx="2.7600000000000002" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="0.9" opacity="0.5"/>
+          <rect x="256.76" y="393.64" width="86.48" height="5.5200000000000005" rx="2.7600000000000002" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="0.9" opacity="0.5"/>
+          <rect x="272.4" y="401.92" width="55.2" height="26.68" rx="4.6000000000000005" fill="url(#ecran)" opacity="0.5"/>
+          <rect x="286.2" y="306.24" width="27.6" height="12.88" fill="#1a2439" stroke="#6ae4ff" stroke-width="1.0" opacity="0.5"/>
+          <rect x="257.68" y="253.79999999999998" width="84.64" height="53.36" rx="12.88" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.3" opacity="0.5"/>
+          <rect x="267.8" y="263.0" width="64.4" height="34.96" rx="8.280000000000001" fill="url(#ecran)" opacity="0.5"/>
+          <circle cx="285.28" cy="280.48" r="5.0600000000000005" fill="#6ae4ff" opacity="0.5"/>
+          <circle cx="314.72" cy="280.48" r="5.0600000000000005" fill="#6ae4ff" opacity="0.5"/>
+          <path d="M 290.8 291.52 Q 300 297.03999999999996 309.2 291.52" fill="none" stroke="#6ae4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.40"/>
+    </g>
+    <g>
+          <ellipse cx="1160" cy="454.28" rx="36.480000000000004" ry="4.94" fill="#6ae4ff" opacity="0.07"/>
+          <path d="M 1136.44 415.52 H 1183.56 l 9.120000000000001 23.56 a 6.08 6.08 0 0 1 -5.32 9.88 H 1132.64 a 6.08 6.08 0 0 1 -5.32 -9.88 Z" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.0" opacity="0.42"/>
+          <circle cx="1144.04" cy="450.48" r="5.32" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="1.0" opacity="0.42"/>
+          <circle cx="1175.96" cy="450.48" r="5.32" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="1.0" opacity="0.42"/>
+          <rect x="1127.32" y="326.6" width="65.36" height="90.44" rx="8.36" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.0" opacity="0.42"/>
+          <rect x="1124.28" y="357.0" width="71.44" height="4.5600000000000005" rx="2.2800000000000002" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="0.8" opacity="0.42"/>
+          <rect x="1124.28" y="388.92" width="71.44" height="4.5600000000000005" rx="2.2800000000000002" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="0.8" opacity="0.42"/>
+          <rect x="1137.2" y="395.76" width="45.6" height="22.04" rx="3.8" fill="url(#ecran)" opacity="0.42"/>
+          <rect x="1148.6" y="316.72" width="22.8" height="10.64" fill="#1a2439" stroke="#6ae4ff" stroke-width="0.8" opacity="0.42"/>
+          <rect x="1125.04" y="273.4" width="69.92" height="44.08" rx="10.64" fill="url(#corps)" stroke="#6ae4ff" stroke-width="1.1" opacity="0.42"/>
+          <rect x="1133.4" y="281.0" width="53.2" height="28.88" rx="6.84" fill="url(#ecran)" opacity="0.42"/>
+          <circle cx="1147.84" cy="295.44" r="4.18" fill="#6ae4ff" opacity="0.42"/>
+          <circle cx="1172.16" cy="295.44" r="4.18" fill="#6ae4ff" opacity="0.42"/>
+          <path d="M 1152.4 304.56 Q 1160 309.12 1167.6 304.56" fill="none" stroke="#6ae4ff" stroke-width="1.2" stroke-linecap="round" opacity="0.34"/>
+    </g>
+
+    <!-- ondes -->
+    <g fill="none" stroke="url(#onde)" stroke-linecap="round">
+              <path d="M 790 118 A 150 150 0 0 1 869 229" stroke-width="9" opacity="0.95"/>
+          <path d="M 821 60 A 215 215 0 0 1 933 220" stroke-width="9" opacity="0.6"/>
+          <path d="M 851 3 A 280 280 0 0 1 997 211" stroke-width="9" opacity="0.3"/>
+    </g>
+
+    <!-- robot de premier plan -->
+    <g>
+          <ellipse cx="720" cy="684.0" rx="150.0" ry="170.0" fill="url(#halo)"/>
+          <ellipse cx="720" cy="696.0" rx="96.0" ry="13.0" fill="#6ae4ff" opacity="0.16"/>
+          <path d="M 658.0 594.0 H 782.0 l 24.0 62.0 a 16.0 16.0 0 0 1 -14.0 26.0 H 648.0 a 16.0 16.0 0 0 1 -14.0 -26.0 Z" fill="url(#corps)" stroke="#6ae4ff" stroke-width="2.6" opacity="1.0"/>
+          <circle cx="678.0" cy="686.0" r="14.0" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.4" opacity="1.0"/>
+          <circle cx="762.0" cy="686.0" r="14.0" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.4" opacity="1.0"/>
+          <rect x="634.0" y="360.0" width="172.0" height="238.0" rx="22.0" fill="url(#corps)" stroke="#6ae4ff" stroke-width="2.6" opacity="1.0"/>
+          <rect x="626.0" y="440.0" width="188.0" height="12.0" rx="6.0" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.0" opacity="1.0"/>
+          <rect x="626.0" y="524.0" width="188.0" height="12.0" rx="6.0" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.0" opacity="1.0"/>
+          <rect x="660.0" y="542.0" width="120.0" height="58.0" rx="10.0" fill="url(#ecran)" opacity="1.0"/>
+          <rect x="690.0" y="334.0" width="60.0" height="28.0" fill="#1a2439" stroke="#6ae4ff" stroke-width="2.2" opacity="1.0"/>
+          <rect x="628.0" y="220.0" width="184.0" height="116.0" rx="28.0" fill="url(#corps)" stroke="#6ae4ff" stroke-width="2.8" opacity="1.0"/>
+          <rect x="650.0" y="240.0" width="140.0" height="76.0" rx="18.0" fill="url(#ecran)" opacity="1.0"/>
+          <circle cx="688.0" cy="278.0" r="11.0" fill="#6ae4ff" opacity="1.0"/>
+          <circle cx="752.0" cy="278.0" r="11.0" fill="#6ae4ff" opacity="1.0"/>
+          <path d="M 700.0 302.0 Q 720 314.0 740.0 302.0" fill="none" stroke="#6ae4ff" stroke-width="3.2" stroke-linecap="round" opacity="0.80"/>
+    </g>
+</svg>
