@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Arcadia — Robot de nettoyage des sols. Illustration vectorielle, sans dépendance externe. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 560" role="img" aria-label="Robot de nettoyage des sols">
+    <style>
+          /* Animations internes — désactivées si l'utilisateur limite les animations */
+          @keyframes regard { 0%,88%,100%{opacity:1} 92%,96%{opacity:.25} }
+          @keyframes pulseHalo { 0%,100%{opacity:.55} 50%{opacity:1} }
+          @keyframes ondeA { 0%{opacity:.25} 30%{opacity:1} 70%{opacity:.25} 100%{opacity:.25} }
+          circle[fill="#6ae4ff"]{ animation: regard 5.5s ease-in-out infinite; }
+          ellipse[fill="url(#halo)"]{ animation: pulseHalo 6s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(1){ animation: ondeA 2.8s ease-in-out infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(2){ animation: ondeA 2.8s ease-in-out .35s infinite; }
+          g[stroke="url(#onde)"] > path:nth-child(3){ animation: ondeA 2.8s ease-in-out .7s infinite; }
+          @media (prefers-reduced-motion: reduce){
+            circle[fill="#6ae4ff"], ellipse[fill="url(#halo)"], g[stroke="url(#onde)"] > path{ animation:none; }
+          }
+    </style>
+    <defs>
+          <linearGradient id="corps" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#26355a"/><stop offset="100%" stop-color="#18223a"/>
+          </linearGradient>
+          <linearGradient id="ecran" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2f66c4"/><stop offset="100%" stop-color="#1b3a70"/>
+          </linearGradient>
+          <linearGradient id="onde" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#1b46d8"/><stop offset="100%" stop-color="#6ae4ff"/>
+          </linearGradient>
+          <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#6ae4ff" stop-opacity=".20"/>
+                  <stop offset="100%" stop-color="#6ae4ff" stop-opacity="0"/>
+          </radialGradient>
+    </defs>
+    <ellipse cx="230" cy="300" rx="200" ry="200" fill="url(#halo)"/>
+    <ellipse cx="230" cy="500" rx="150" ry="16" fill="#6ae4ff" opacity=".14"/>
+    <!-- traces de lavage -->
+    <g fill="none" stroke="#6ae4ff" stroke-linecap="round" opacity=".38">
+          <path d="M 60 470 q 60 -16 120 0" stroke-width="5"/>
+          <path d="M 40 490 q 78 -18 156 0" stroke-width="4" opacity=".6"/>
+    </g>
+    <!-- châssis bas -->
+    <path d="M 108 330 H 352 a 26 26 0 0 1 26 26 V 434 a 26 26 0 0 1 -26 26 H 108 a 26 26 0 0 1 -26 -26 V 356 a 26 26 0 0 1 26 -26 Z"
+              fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <!-- brosses -->
+    <circle cx="146" cy="460" r="30" fill="none" stroke="#6ae4ff" stroke-width="3" opacity=".85"/>
+    <circle cx="146" cy="460" r="15" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.4"/>
+    <circle cx="314" cy="460" r="30" fill="none" stroke="#6ae4ff" stroke-width="3" opacity=".85"/>
+    <circle cx="314" cy="460" r="15" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="2.4"/>
+    <!-- réservoir -->
+    <rect x="138" y="232" width="184" height="98" rx="18" fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <rect x="158" y="252" width="144" height="58" rx="10" fill="url(#ecran)" opacity=".55"/>
+    <rect x="158" y="292" width="144" height="18" rx="9" fill="#6ae4ff" opacity=".45"/>
+    <!-- panneau de commande incliné -->
+    <rect x="166" y="150" width="128" height="74" rx="14" fill="url(#corps)" stroke="#6ae4ff" stroke-width="3"/>
+    <rect x="182" y="166" width="96" height="42" rx="8" fill="url(#ecran)"/>
+    <g fill="#bfe3ff" opacity=".9">
+          <rect x="194" y="180" width="44" height="6" rx="3"/>
+          <rect x="194" y="192" width="64" height="6" rx="3"/>
+    </g>
+    <!-- capteur -->
+    <circle cx="230" cy="126" r="14" fill="#0f1a2e" stroke="#6ae4ff" stroke-width="3"/>
+    <circle cx="230" cy="126" r="5" fill="#6ae4ff"/>
+    <g fill="none" stroke="url(#onde)" stroke-width="7" stroke-linecap="round" opacity=".85">
+          <path d="M 266 96 A 74 74 0 0 1 312 152"/>
+          <path d="M 282 68 A 112 112 0 0 1 350 152"/>
+    </g>
+</svg>
