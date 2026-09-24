@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Arcadia, Tourves (83)</title>
+<meta name="description" content="Contacter Arcadia : robots de service et intelligence artificielle. 15 bis rue Paul Rougiers, 83170 Tourves. 06 86 40 24 77.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="arcadia.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap"><p>Un technicien vous répond au <a href="tel:+33686402477">06 86 40 24 77</a></p></div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="Arcadia — accueil"><img class="logo" src="logo-arcadia.svg" alt="Arcadia"></a>
+    <nav class="links">
+      <a href="index.html">Accueil</a>
+      <a href="robots.html">Robots</a>
+      <a href="ia.html">Intelligence artificielle</a>
+      <a href="methode.html">Méthode</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="contact.html">Parler à un technicien</a>
+  </div>
+</header>
+
+<section class="pagehead">
+  <div class="wrap">
+    <p class="micro">Contact</p>
+    <h1 class="t-head-lg">Dites-nous ce que vous voulez automatiser</h1>
+    <p class="lede">Décrivez votre situation en quelques lignes : nous vous rappelons sous 48 heures pour en parler concrètement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="t-head">Parlons de votre besoin</h2>
+      <p class="muted" style="margin-top:16px;">Quinze minutes d'échange suffisent généralement pour savoir si votre besoin relève d'un robot, d'un outil logiciel, ou d'aucun des deux. Nous vous le disons franchement.</p>
+      <dl class="facts">
+        <div class="fact"><dt>Téléphone</dt><dd><a href="tel:+33686402477">+33 (0)6 86 40 24 77</a></dd></div>
+        <div class="fact"><dt>Adresse</dt><dd>15 bis rue Paul Rougiers<br>83170 Tourves</dd></div>
+        <div class="fact"><dt>Démonstration</dt><dd>Sur rendez-vous, sur votre site</dd></div>
+        <div class="fact"><dt>Assistance</dt><dd><a href="https://www.arcadiainfo.com">arcadiainfo.com</a></dd></div>
+      </dl>
+    </div>
+    <form onsubmit="event.preventDefault(); var b=this.querySelector('button'); b.textContent='Demande enregistrée'; b.disabled=true;">
+      <div class="field"><label for="c-nom">Nom</label><input id="c-nom" name="nom" type="text" required></div>
+      <div class="field"><label for="c-soc">Société</label><input id="c-soc" name="societe" type="text"></div>
+      <div class="field"><label for="c-tel">Téléphone</label><input id="c-tel" name="tel" type="tel" required></div>
+      <div class="field"><label for="c-mail">Courriel</label><input id="c-mail" name="email" type="email"></div>
+      <div class="field">
+        <label for="c-sujet">Votre demande concerne</label>
+        <select id="c-sujet" name="sujet">
+          <option>Un robot d'accueil</option>
+          <option>Un robot de livraison en salle</option>
+          <option>Un robot de nettoyage</option>
+          <option>Un diagnostic d'automatisation IA</option>
+          <option>Autre / je ne sais pas encore</option>
+        </select>
+      </div>
+      <div class="field"><label for="c-msg">Précisions</label><textarea id="c-msg" name="message" placeholder="Surface des locaux, horaires, tâches concernées…"></textarea></div>
+      <button class="btn btn-solid" type="submit" style="width:100%;">Envoyer la demande</button>
+    </form>
+  </div>
+</section>
+
+<section class="band-tide">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="t-head">Ce qui se passe ensuite</h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal="0">
+        <p class="n">Sous 48 h</p><h3>Nous vous rappelons</h3>
+        <p>Un échange court pour cerner le besoin et vérifier qu'une solution existe réellement.</p>
+      </div>
+      <div class="step" data-reveal="90">
+        <p class="n">Semaine suivante</p><h3>Visite sur place</h3>
+        <p>Relevé des contraintes réelles de vos locaux. Sans engagement de votre part.</p>
+      </div>
+      <div class="step" data-reveal="180">
+        <p class="n">Ensuite</p><h3>Démonstration</h3>
+        <p>Le matériel envisagé, chez vous, en conditions d'usage, devant vos équipes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel" data-reveal="0">
+      <div class="copy">
+        <p class="micro">Besoin immédiat</p>
+        <h2 class="t-head" style="margin-top:12px;">Un problème informatique à régler tout de suite ?</h2>
+        <p>L'assistance à distance Arcadia prend la main sur votre poste avec l'outil déjà installé dessus. Pas de logiciel à télécharger, pas de déplacement.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="https://www.arcadiainfo.com">Ouvrir l'assistance à distance</a>
+          <a class="ghost" href="tel:+33686402477">06 86 40 24 77</a>
+        </div>
+      </div>
+      <div class="visual"><img src="img/robot-livraison.svg" alt="Robot de service"></div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo-pied" src="logo-arcadia.svg" alt="Arcadia">
+        <p>Robotique de service et intelligence artificielle pour les professionnels et les collectivités du Var.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="robots.html">Robots d'accueil</a></li>
+          <li><a href="robots.html">Livraison en salle</a></li>
+          <li><a href="robots.html">Nettoyage des sols</a></li>
+          <li><a href="ia.html">Automatisation IA</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Arcadia</h4>
+        <ul>
+          <li><a href="methode.html">Méthode</a></li>
+          <li><a href="methode.html#zone">Zone d'intervention</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.arcadiainfo.com">Assistance à distance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bas">
+      <span>© 2026 Arcadia — SASU · 15 bis rue Paul Rougiers, 83170 Tourves</span>
+      <span><a href="tel:+33686402477">06 86 40 24 77</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="arcadia.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcadia — Robots de service &amp; intelligence artificielle</title>
+<meta name="description" content="Arcadia déploie des robots de service et intègre l'intelligence artificielle dans les entreprises du Var. Accueil, livraison en salle, nettoyage, automatisation.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="arcadia.css">
+<style>
+  /* Hero : le texte d'abord, la scène en bandeau juste en dessous */
+  .hero{position:relative;overflow:hidden;}
+  .hero::before{
+    content:"";position:absolute;left:50%;top:-460px;transform:translateX(-50%);
+    width:1600px;height:1150px;max-width:230vw;pointer-events:none;
+    background:radial-gradient(ellipse 50% 45% at 50% 50%, rgba(41,138,203,.42) 0%, rgba(27,70,216,.22) 36%, rgba(23,32,46,0) 74%);
+  }
+  .hero .wrap{position:relative;padding-block:clamp(52px,7vw,84px) 0;text-align:center;}
+  .hero h1{max-width:15ch;margin-inline:auto;}
+  .hero .lede{margin:22px auto 0;}
+  .hero .actions{justify-content:center;margin-top:32px;}
+
+  /* La scène : pleine largeur, à son échelle, fondue dans le fond */
+  .hero-scene{position:relative;margin-top:clamp(14px,2vw,26px);}
+  .hero-scene img{width:100%;height:auto;display:block;}
+  .hero-scene::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:20%;pointer-events:none;
+    background:linear-gradient(180deg,rgba(23,32,46,0),var(--abyss) 94%);
+  }
+  /* Les cartes remontent franchement sur le bas de la scène */
+  .hero-cartes{position:relative;z-index:2;margin-top:calc(-1 * clamp(40px,5vw,76px));padding-top:0;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap"><p>Démonstration de robots sur votre site, dans le Var — <a href="contact.html">réserver un créneau</a></p></div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="Arcadia — accueil"><img class="logo" src="logo-arcadia.svg" alt="Arcadia"></a>
+    <nav class="links">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="robots.html">Robots</a>
+      <a href="ia.html">Intelligence artificielle</a>
+      <a href="methode.html">Méthode</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="contact.html">Parler à un technicien</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="micro">Robotique de service &amp; intelligence artificielle</p>
+    <h1 class="t-display">Des robots pour <span class="cyan">maintenant</span>, pas pour un jour.</h1>
+    <p class="lede">Arcadia sélectionne, installe et entretient des robots de service pour les professionnels du Var — et intègre l'IA là où elle rend des heures.</p>
+    <div class="actions">
+      <a class="btn btn-solid" href="contact.html">Demander une démonstration</a>
+      <a class="ghost" href="robots.html">Voir les robots →</a>
+    </div>
+  </div>
+  <div class="hero-scene"><img src="img/scene-flotte.svg" alt="Flotte de robots de service alignés dans un hall"></div>
+</section>
+
+<section class="hero-cartes">
+  <div class="wrap grid-3">
+    <article class="card" data-reveal="0">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="mark">◒</div>
+        <div><h3>Accueil</h3><p class="over" style="margin-top:2px;">Hall · Réception</p></div>
+      </div>
+      <p class="over">Visiteurs orientés sans mobiliser le poste d'accueil</p>
+      <p class="figure">24 h/24</p>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;">
+        <span class="chip">Orientation · Information</span><span class="badge">Sur site</span>
+      </div>
+    </article>
+    <article class="card" data-reveal="90">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="mark">◇</div>
+        <div><h3>Livraison</h3><p class="over" style="margin-top:2px;">Restauration · Santé</p></div>
+      </div>
+      <p class="over">Trajets autonomes en salle, sans intervention humaine</p>
+      <p class="figure">Jusqu'à 40 kg</p>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;">
+        <span class="chip">Plats · Linge · Matériel</span><span class="badge">Sur site</span>
+      </div>
+    </article>
+    <article class="card" data-reveal="180">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="mark">◎</div>
+        <div><h3>Nettoyage</h3><p class="over" style="margin-top:2px;">Bureaux · Commerces</p></div>
+      </div>
+      <p class="over">Surfaces traitées par cycle programmé</p>
+      <p class="figure">Jusqu'à 2 000 m²</p>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;">
+        <span class="chip">Lavage · Aspiration</span><span class="badge">Sur site</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel" data-reveal="0">
+      <div class="copy">
+        <p class="micro">Matériel</p>
+        <h2 class="t-head" style="margin-top:12px;">Pas un prototype. Pas un labo. Aujourd'hui.</h2>
+        <p>Le matériel que nous déployons est déjà en exploitation chez des professionnels. Il arrive configuré pour vos locaux : cartographie réalisée sur place, plages horaires réglées avec vos équipes, maintenance assurée par nos soins.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="robots.html">Découvrir les robots</a>
+          <a class="ghost" href="methode.html">Comment on procède →</a>
+        </div>
+      </div>
+      <div class="visual"><img src="img/robot-livraison.svg" alt="Robot de livraison en salle, à plateaux"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band-royal">
+  <div class="wrap stats">
+    <div class="stat"><b>1-2 j</b><span>durée du diagnostic</span></div>
+    <div class="stat"><b>48 h</b><span>délai d'intervention</span></div>
+    <div class="stat"><b>83</b><span>zone d'intervention</span></div>
+    <div class="stat"><b>B2B</b><span>entreprises &amp; collectivités</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel flip" data-reveal="0">
+      <div class="copy">
+        <p class="micro">Intelligence artificielle</p>
+        <h2 class="t-head" style="margin-top:12px;">L'IA sur vos process, pas sur une plaquette.</h2>
+        <p>Un à deux jours d'audit suffisent à isoler ce qui mérite d'être automatisé dans votre activité — et à écarter le reste. Ensuite seulement viennent les outils : documents entrants, réponses clients, tableaux de bord.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="ia.html">Voir l'offre IA</a>
+          <a class="ghost" href="contact.html">Demander un diagnostic →</a>
+        </div>
+      </div>
+      <div class="visual"><img src="img/robot-accueil.svg" alt="Robot d'accueil à écran d'orientation"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band-tide">
+  <div class="wrap">
+    <div class="head">
+      <p class="micro">Méthode</p>
+      <h2 class="t-head" style="margin-top:12px;">Un robot mal choisi devient un meuble</h2>
+      <p>C'est pourquoi rien n'est vendu sans être venu voir, et rien n'est installé sans avoir été démontré chez vous.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal="0">
+        <p class="n">Étape 01</p><h3>Visite sur site</h3>
+        <p>Largeur des passages, nature des sols, flux de circulation, horaires. Les contraintes réelles décident du matériel.</p>
+      </div>
+      <div class="step" data-reveal="90">
+        <p class="n">Étape 02</p><h3>Démonstration</h3>
+        <p>Le matériel envisagé, chez vous, en conditions d'usage. Vous jugez sur pièce plutôt que sur une plaquette.</p>
+      </div>
+      <div class="step" data-reveal="180">
+        <p class="n">Étape 03</p><h3>Déploiement et suivi</h3>
+        <p>Installation, cartographie, formation des équipes, puis maintenance. Un interlocuteur unique, basé dans le Var.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2 class="t-head">Dites-nous ce que vous voulez automatiser</h2>
+        <p>Quinze minutes suffisent pour savoir si votre besoin relève d'un robot, d'un outil logiciel, ou d'aucun des deux.</p>
+      </div>
+      <a class="btn btn-solid" href="contact.html">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo-pied" src="logo-arcadia.svg" alt="Arcadia">
+        <p>Robotique de service et intelligence artificielle pour les professionnels et les collectivités du Var.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="robots.html">Robots d'accueil</a></li>
+          <li><a href="robots.html">Livraison en salle</a></li>
+          <li><a href="robots.html">Nettoyage des sols</a></li>
+          <li><a href="ia.html">Automatisation IA</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Arcadia</h4>
+        <ul>
+          <li><a href="methode.html">Méthode</a></li>
+          <li><a href="methode.html#zone">Zone d'intervention</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.arcadiainfo.com">Assistance à distance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bas">
+      <span>© 2026 Arcadia — SASU · 15 bis rue Paul Rougiers, 83170 Tourves</span>
+      <span><a href="tel:+33686402477">06 86 40 24 77</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="arcadia.js"></script>
+</body>
+</html>
