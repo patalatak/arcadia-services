@@ -1,0 +1,12 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Interdire l'acces aux fichiers internes du depot.
+RewriteRule ^(?:\.git|\.github)(?:/|$) - [F,L]
+RewriteRule ^\.well-known/ - [L]
+
+# Conserver les adresses publiques avec les sources dans Arcadia.service.
+RewriteRule ^Arcadia\.service(?:/|$) - [L]
+RewriteRule ^(.*)$ Arcadia.service/$1 [L]
