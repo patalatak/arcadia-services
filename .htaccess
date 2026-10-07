@@ -1,6 +1,10 @@
 Options -Indexes
 DirectoryIndex index.html
 
+<IfModule mod_headers.c>
+    Header set X-Arcadia-Deployment "git-ovh"
+</IfModule>
+
 RewriteEngine On
 
 # Interdire l'acces aux fichiers internes du depot.
