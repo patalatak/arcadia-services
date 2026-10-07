@@ -3,6 +3,7 @@ DirectoryIndex index.html
 
 <IfModule mod_headers.c>
     Header set X-Arcadia-Deployment "git-ovh"
+    Header set X-Arcadia-Release "www-auto-20261007"
 </IfModule>
 
 RewriteEngine On
